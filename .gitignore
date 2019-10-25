@@ -1,0 +1,19 @@
+__init__.py
+dump.py
+*.pyc
+*.log
+*.root
+*~
+
+# ___________________________________
+# Exclude these files
+
+connect.py
+
+
+# ___________________________________
+# Exclude these directories
+
+connect_projects/
+connect_projects_old/
+connect_projects_backup/
