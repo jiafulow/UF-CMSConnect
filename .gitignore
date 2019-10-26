@@ -8,8 +8,7 @@ dump.py
 # ___________________________________
 # Exclude these files
 
-connect.py
-
+default.tgz
 
 # ___________________________________
 # Exclude these directories
@@ -17,3 +16,5 @@ connect.py
 connect_projects/
 connect_projects_old/
 connect_projects_backup/
+.connect/
+CMSSW_10_6_3/
