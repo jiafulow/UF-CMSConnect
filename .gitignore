@@ -17,4 +17,5 @@ connect_projects/
 connect_projects_old/
 connect_projects_backup/
 .connect/
+store/
 CMSSW_10_6_3/

@@ -12,6 +12,7 @@ cd -
 # CMSConnect
 source ~/software/connect-client/client_source.sh
 alias connnode='connect submit node'
+alias connpull='connect pull'
 
 # Renew grid proxy
 #connect shell
