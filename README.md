@@ -4,9 +4,9 @@
 
 You need to have a CMS Connect account. See: <https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookCMSConnect>.
 
-### Install CMSConnect client
+### Install CMS Connect client
 
-To install CMSConnect client, follow the commands in `connect-client.sh`. See [here]( https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookCMSConnect#Using_the_Connect_client) for more details.
+To install the CMS Connect client, follow the commands in `connect-client.sh`. See [here]( https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookCMSConnect#Using_the_Connect_client) for more details.
 
 You should also add the SSH key to your account. See [here](https://ci-connect.atlassian.net/wiki/spaces/CMS/pages/57436024/Generate+SSH+key+pair+and+add+the+public+key+to+your+account) for instructions.
 
@@ -15,7 +15,8 @@ You should also add the SSH key to your account. See [here](https://ci-connect.a
 First, check out this repository:
 
 ``` shell
-git clone git@github.com:jiafulow/UF-CMSConnect
+# Make sure to use the correct branch for the CMSSW version
+git clone -b L1MuonTrigger-P2_10_6_3 git@github.com:jiafulow/UF-CMSConnect.git CMSConnect/P2_10_6_3
 ```
 
 To set up the environment, follow the commands in `startup.sh`. Note that this changes the CMSSW base. Also note that this needs to be done at the beginning of every new session.
