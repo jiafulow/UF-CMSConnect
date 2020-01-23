@@ -22,7 +22,7 @@ print('Using CMSSW base: {0}'.format(os.environ['CMSSW_BASE']))
 jobs = PostProcessJobs()
 jobs.pack(input_files)
 
-jobs.create(tag='jftest1', algo='default', analysis='signal', jobids=range(200), commands=commands)
-jobs.create(tag='jftest2', algo='default', analysis='bkgnd', jobids=range(192), commands=commands)
+jobs.create(tag='test1', algo='default', analysis='signal', jobids=range(200), commands=commands)
+jobs.create(tag='test2', algo='default', analysis='bkgnd', jobids=range(192), commands=commands)
 
-#jobs.create(tag='jftest1_prompt', algo='default', analysis='signal', jobids=range(100), commands=commands)
+#jobs.create(tag='test1_prompt', algo='default', analysis='signal', jobids=range(100), commands=commands)
