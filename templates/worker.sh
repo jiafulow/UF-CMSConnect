@@ -40,9 +40,7 @@ eval "$(scramv1 runtime -sh)"
 # Change back to the worker node's scratch directory.
 cd "$_CONDOR_SCRATCH_DIR"
 
-echo "[INFO] pwd: -"
-pwd
-echo "[INFO] ls: -"
+echo "[INFO] ls (pwd: $PWD)"
 ls -l
 
 echo "[INFO] Stand back I'm going to try Science!"
@@ -75,7 +73,7 @@ tar tzf $TARBALL | xargs rm -rf
 rm -rf $TARBALL
 rm -rf *.pyc
 
-echo "[INFO] ls: -"
+echo "[INFO] ls (pwd: $PWD)"
 ls -l
 
 exit $EXIT_STATUS

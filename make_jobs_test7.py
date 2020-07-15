@@ -14,7 +14,7 @@ input_files = map(lambda x: os.path.join(input_dir, x), input_files)  # prepend 
 
 # Additional HTCondor commands
 commands = {
-  '+ProjectName': 'cms.org.ufl',
+  '+ProjectName': '\"cms.org.ufl\"',
   '+REQUIRED_OS': '\"rhel7\"',
 }
 

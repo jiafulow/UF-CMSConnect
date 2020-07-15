@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import numpy as np
 import os
-
+import six
+import numpy as np
 
 class Hadd(object):
 
@@ -17,9 +17,9 @@ class Hadd(object):
       if not (isinstance(row_splits, (np.ndarray, np.generic)) and
               row_splits.dtype in (np.int64, np.int32) and row_splits.ndim == 1):
         raise TypeError("row_splits must be a 1D int32 or int64 numpy array")
-      # Ignore the first entry in row_splits, because the first entry is always zero.
+      # Ignore the first entry in row_splits, as the first entry is always zero.
       # Increment all the entries in row_splits by the last value in new_row_splits.
-      new_row_splits.extend(row_splits[1:] + new_row_splits[-1])
+      new_row_splits.extend(new_row_splits[-1] + row_splits[1:])
     new_row_splits = np.asarray(new_row_splits, dtype=np.int32)
     return new_row_splits
 
@@ -41,7 +41,7 @@ class Hadd(object):
           self.d[k].append(data[k])
 
     print('hadding...')
-    for k, v in self.d.iteritems():
+    for k, v in six.iteritems(self.d):
       print('array: {0}'.format(k))
       if k.endswith('_row_splits'):
         vv = self._stack_row_splits(v)

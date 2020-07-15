@@ -18,3 +18,4 @@ python make_jobs_test9.py
 # Submit jobs
 cd connect_projects/test1 && connnode && cd -
 cd connect_projects/test2 && connnode && cd -
+cd connect_projects/test3 && connnode && cd -
